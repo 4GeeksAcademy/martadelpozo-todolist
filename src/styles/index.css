@@ -10,3 +10,76 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+body{
+    background: #fafafa;
+}
+
+.task-title{
+    font-weight: 100;
+    color: #e6c3c8;
+    font-size: 100px;
+}
+
+.tasks{
+    width: 550px;
+    background: white;
+    box-shadow: 7px 5px 20px #9c9a9a;
+
+}
+
+input{
+    font-weight: 300;
+    color: #393838;
+    font-size: 20px;
+    width: 550px;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding-inline-start: 30px;
+}
+
+.task-list{
+    text-align:left;
+}
+
+.task{
+    position: relative; 
+    font-weight: 300;
+    color: #393838;
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-inline-start: 30px;
+    vertical-align: bottom;
+}
+
+.task-text {
+    display: inline-block; 
+    width: 80%; 
+  }
+
+.task-number{
+    font-size: 11px;
+    color: #b4b2b2;
+    border-bottom: 1px solid #ccc;
+    text-align:left;
+    padding-inline-start: 10px;
+    padding: 6px;
+
+}
+
+
+.delete-icon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+  }
+  
+  .task:hover .delete-icon {
+    display: block;
+  }
+

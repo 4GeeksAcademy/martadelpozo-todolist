@@ -11,7 +11,7 @@ function TaskItem({ task, onDelete }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {task}
+      <span className="task-text">{task}</span>
       {isHovered && (
         <span className="delete-icon" onClick={onDelete}>
           &#10006;
@@ -38,9 +38,10 @@ function ToDo() {
   };
 
   return (
+    <>
     <div className="container">
       <h1 className="task-title">todos</h1>
-      <div className="tasks">
+      <div className="tasks mx-auto">
       <input 
         type="text"
         placeholder="What needs to be done?"
@@ -52,7 +53,7 @@ function ToDo() {
       />
     
       <div className="task-list">
-        {tasks.map((task, index) => (
+      {tasks.map((task, index) => (
           <TaskItem key={index} task={task} onDelete={() => deleteTask(index)} />
         ))}
       </div>
@@ -66,6 +67,7 @@ function ToDo() {
       </div>
       </div>
     </div>
+    </>
   );
 }
 
